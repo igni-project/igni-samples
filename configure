@@ -605,6 +605,7 @@ PACKAGE_STRING='igni-samples 0.1.0'
 PACKAGE_BUGREPORT=''
 PACKAGE_URL=''
 
+ac_default_prefix=/usr
 ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
@@ -2307,6 +2308,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 CFLAGS="$CFLAGS -DMAJ_V="0" -DMIN_V="1" -DPATCH_V="0
+
 
 am__api_version='1.17'
 

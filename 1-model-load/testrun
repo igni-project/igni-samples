@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export IGNI_RENDER_SRV=/run/user/$UID/igni/render0
+
+./igni-sample-1
+

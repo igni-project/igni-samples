@@ -1,4 +1,4 @@
-bin_PROGRAMS=1-model-load
-1_model_load_SOURCES=model_load.c
+bin_PROGRAMS=igni-sample-1
+igni_sample_1_SOURCES=model_load.c
 
 

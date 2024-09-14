@@ -88,7 +88,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = 1-model-load$(EXEEXT)
+bin_PROGRAMS = igni-sample-1$(EXEEXT)
 subdir = 1-model-load
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -101,9 +101,9 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_1_model_load_OBJECTS = model_load.$(OBJEXT)
-1_model_load_OBJECTS = $(am_1_model_load_OBJECTS)
-1_model_load_LDADD = $(LDADD)
+am_igni_sample_1_OBJECTS = model_load.$(OBJEXT)
+igni_sample_1_OBJECTS = $(am_igni_sample_1_OBJECTS)
+igni_sample_1_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -133,8 +133,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(1_model_load_SOURCES)
-DIST_SOURCES = $(1_model_load_SOURCES)
+SOURCES = $(igni_sample_1_SOURCES)
+DIST_SOURCES = $(igni_sample_1_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -249,7 +249,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-1_model_load_SOURCES = model_load.c
+igni_sample_1_SOURCES = model_load.c
 all: all-am
 
 .SUFFIXES:
@@ -326,9 +326,9 @@ uninstall-binPROGRAMS:
 clean-binPROGRAMS:
 	-$(am__rm_f) $(bin_PROGRAMS)
 
-1-model-load$(EXEEXT): $(1_model_load_OBJECTS) $(1_model_load_DEPENDENCIES) $(EXTRA_1_model_load_DEPENDENCIES) 
-	@rm -f 1-model-load$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(1_model_load_OBJECTS) $(1_model_load_LDADD) $(LIBS)
+igni-sample-1$(EXEEXT): $(igni_sample_1_OBJECTS) $(igni_sample_1_DEPENDENCIES) $(EXTRA_igni_sample_1_DEPENDENCIES) 
+	@rm -f igni-sample-1$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(igni_sample_1_OBJECTS) $(igni_sample_1_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

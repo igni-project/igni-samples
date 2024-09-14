@@ -26,6 +26,8 @@ int main(void)
 	/* Halt for 10 seconds */
 	sleep(10);
 
+	/* Quit */
+	close(scene);
 	return 0;
 }
 

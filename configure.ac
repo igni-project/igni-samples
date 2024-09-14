@@ -5,6 +5,7 @@ m4_define([PATCH_V], [0])
 
 AC_INIT([igni-samples], MAJOR_V.MINOR_V.PATCH_V)
 CFLAGS="$CFLAGS -DMAJ_V="MAJOR_V" -DMIN_V="MINOR_V" -DPATCH_V="PATCH_V
+AC_PREFIX_DEFAULT(/usr)
 
 AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 
