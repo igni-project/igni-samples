@@ -10,8 +10,8 @@ Basic Igni demonstrations and tests
 * [igni-server](https://github.com/igni-project/igni-server)
 * [libigni](https://github.com/igni-project/libigni)
 * [make](https://www.gnu.org/software/make)
-* [autoconf](https://www.gnu.org/software/autoconf) (optional)
-* [automake](https://www.gnu.org/software/automake) (optional)
+* [autoconf](https://www.gnu.org/software/autoconf)
+* [automake](https://www.gnu.org/software/automake)
 
 
 ### Instructions
