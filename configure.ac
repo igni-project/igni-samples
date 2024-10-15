@@ -18,6 +18,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
 	Makefile
 	1-model-load/Makefile
+	2-hitbox/Makefile
 ])
 
 AC_OUTPUT

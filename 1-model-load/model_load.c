@@ -1,12 +1,13 @@
 #include "model_load.h"
 #include <libigni/render.h>
-#include <stdio.h> /* printf() */
-#include <unistd.h> /* sleep() */
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 
 int main(void)
 {
 	/* 1. Connect to the render engine's socket */
-	int scene = igniRndOpen();
+	int scene = igniConnect(getenv("IGNI_RENDER_SRV"));
 
 	if (scene == -1)
 	{

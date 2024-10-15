@@ -7,7 +7,8 @@ Basic Igni demonstrations and tests
 ### Prerequisites
 
 * a C compiler
-* [igni-server](https://github.com/igni-project/igni-server)
+* [igni-render](https://github.com/igni-project/igni-render)
+* [igni-hit](https://github.com/igni-project/igni-hit)
 * [libigni](https://github.com/igni-project/libigni)
 * [make](https://www.gnu.org/software/make)
 * [autoconf](https://www.gnu.org/software/autoconf)

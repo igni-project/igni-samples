@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export IGNI_RENDER_SRV=/run/user/$UID/igni/render0
+export IGNI_HIT_SRV=/run/user/$UID/igni/hit0
+
+gdb ./igni-sample-2
+
