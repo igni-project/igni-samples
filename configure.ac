@@ -9,7 +9,7 @@ AC_PREFIX_DEFAULT(/usr)
 
 AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 
-AC_CHECK_LIB([igni], [igniRndOpen], [], AC_MSG_ERROR([libigni not found!]))
+AC_CHECK_LIB([igni], [igniConnect], [], AC_MSG_ERROR([libigni not found!]))
 
 AC_PROG_CC
 
