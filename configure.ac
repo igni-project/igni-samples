@@ -17,7 +17,7 @@ AC_CONFIG_HEADERS([config.h])
 
 AC_CONFIG_FILES([
 	Makefile
-	1-load-model/Makefile
+	src/Makefile
 ])
 
 AC_OUTPUT

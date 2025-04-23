@@ -1,4 +1,4 @@
-SUBDIRS=1-load-model
+SUBDIRS=src
 dist_doc_DATA=README.md
 
 pkgconfigdir=$(libdir)/pkgconfig
