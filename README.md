@@ -2,6 +2,14 @@
 
 A set of programs that showcase the Igni computing environment
 
+## Running the Program
+
+If a SUP display manager is already installed and active, simply run the built executable in `src/`. If no such display manager is available, 
+
+1. Clone, build and install [ignition](https://github.com/igni-project/ignition) as instructed in its README file.
+
+2. Run the `testrun` script in the root directory of this repository.
+
 ## Prerequisites
 
 Specialised software is required in order to compile this source code. If one or more prerequisites are not installed, the final executable may not build or lack certain features.
@@ -23,6 +31,11 @@ available on most linux systems package managers.
 
 2. Clone libsup with a Git client of your choice. With the [official git command-line client](https://git-scm.com/downloads/linux), this will be `git clone https://github.com/igni-project/libsup.git`.
 
-3. Open a terminal in the root folder of the repository and run the command `./bootstrap && ./configure && make && sudo make install`.
+3. Open a terminal in the root folder of the libsup repository and run the command `./bootstrap && ./configure && make && sudo make install`.
+
+## Build Instructions
+
+run the command `./bootstrap && ./configure && make && sudo make install`.
+
 
 
