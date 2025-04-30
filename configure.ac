@@ -1,6 +1,6 @@
 
 m4_define([MAJOR_V], [0])
-m4_define([MINOR_V], [1])
+m4_define([MINOR_V], [2])
 m4_define([PATCH_V], [0])
 
 AC_INIT([igni-samples], MAJOR_V.MINOR_V.PATCH_V)
@@ -18,6 +18,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
 	Makefile
 	src/Makefile
+	igni-samples.pc
 ])
 
 AC_OUTPUT

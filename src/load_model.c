@@ -1,4 +1,4 @@
-#include "load-model.h"
+#include "load_model.h"
 
 #include <libsup/sup.h>
 #include <stdio.h>
@@ -13,7 +13,9 @@ int load_model()
 	int fd;
 	struct sockaddr_un svAddr;
 	const char* domain;
-   
+
+	printf("Running sample: Load Model\n");
+
 	/* An Igni display server shall use the environment variable
 	 * 'IGNI_DISPLAY' to communicate the absolute path of its socket. */
 	domain = getenv("IGNI_DISPLAY");
@@ -49,6 +51,7 @@ int load_model()
 
 	/* Halt for 60 seconds and quit */
 	sleep(60);
+
 	return 0;
 }
 

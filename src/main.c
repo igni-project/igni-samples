@@ -1,12 +1,20 @@
 #include "main.h"
 
-#include "load-model.h"
-#include <stdio.h>
+#include "cmd/cmdline.h"
+#include "load_model.h"
 
 int main(int argc, char *argv[])
 {
-	printf("Running test 1: Load Model.\n");
+	struct gengetopt_args_info args_info;
 
-	return load_model();
+	cmdline_parser(argc, argv, &args_info);
+
+	switch (args_info.sample_arg[0])
+	{
+	case 'l':
+		return load_model();
+	default:
+		return 0;
+	}
 }
 
