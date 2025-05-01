@@ -2,6 +2,7 @@
 
 #include "cmd/cmdline.h"
 #include "load_model.h"
+#include "hitbox.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +14,8 @@ int main(int argc, char *argv[])
 	{
 	case 'l':
 		return load_model();
+	case 'h':
+		return hitbox();
 	default:
 		return 0;
 	}
