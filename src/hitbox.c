@@ -60,21 +60,21 @@ int hitbox()
 		
 		/* Detect collisions on X axis */
 		recv(fd, &cqp_float_param, sizeof(cqp_float_param), 0);
-		if (cqp_float_param < -5 && cqp_float_param > 5)
+		if (cqp_float_param < -5 || cqp_float_param > 5)
 		{
 			box_hit = 0;
 		}
 
 		/* Detect collisions on Y axis */
 		recv(fd, &cqp_float_param, sizeof(cqp_float_param), 0);
-		if (cqp_float_param < -5 && cqp_float_param > 5)
+		if (cqp_float_param < -5 || cqp_float_param > 5)
 		{
 			box_hit = 0;
 		}
 
 		/* Detect collisions on Z axis */
 		recv(fd, &cqp_float_param, sizeof(cqp_float_param), 0);
-		if (cqp_float_param < -5 && cqp_float_param > 5)
+		if (cqp_float_param < -5 || cqp_float_param > 5)
 		{
 			box_hit = 0;
 		}
