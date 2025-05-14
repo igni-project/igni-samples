@@ -36,7 +36,7 @@ const char *gengetopt_args_info_description = "";
 const char *gengetopt_args_info_help[] = {
   "  -h, --help           Print help and exit",
   "  -V, --version        Print version and exit",
-  "  -s, --sample=STRING  sample name  (possible values=\"load-model\")",
+  "  -s, --sample=STRING  sample name  (possible values=\"load-model hitbox\n                         cqp-cast\")",
     0
 };
 
@@ -56,7 +56,7 @@ cmdline_parser_internal (int argc, char **argv, struct gengetopt_args_info *args
 static int
 cmdline_parser_required2 (struct gengetopt_args_info *args_info, const char *prog_name, const char *additional_error);
 
-const char *cmdline_parser_sample_values[] = {"load-model", 0}; /*< Possible values for sample. */
+const char *cmdline_parser_sample_values[] = {"load-model hitbox cqp-cast", 0}; /*< Possible values for sample. */
 
 static char *
 gengetopt_strdup (const char *s);

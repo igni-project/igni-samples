@@ -1,6 +1,7 @@
 #include "main.h"
 
 #include "cmd/cmdline.h"
+#include "cqp_cast.h"
 #include "load_model.h"
 #include "hitbox.h"
 
@@ -12,6 +13,8 @@ int main(int argc, char *argv[])
 
 	switch (args_info.sample_arg[0])
 	{
+	case 'c':
+		return cqp_cast();
 	case 'l':
 		return load_model();
 	case 'h':

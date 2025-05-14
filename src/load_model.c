@@ -1,5 +1,8 @@
 #include "load_model.h"
 
+/* Sample: Load Model
+ * Difficulty: Easy */
+
 #include <libsup/sup.h>
 #include <stdio.h>
 #include <string.h>
@@ -11,8 +14,6 @@
 /* SUP requires all meshes have a unique identification code. */
 #define MESH_ID 3
 
-/* Sample: Load Model
- * Difficulty: Easy */
 int load_model()
 {
 	/* Igni display socket */

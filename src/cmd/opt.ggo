@@ -2,5 +2,5 @@ package "igni-samples"
 version "0.1"
 purpose "A set of programs that showcase the Igni computing environment"
 
-option "sample" s "sample name" values="load-model" required
+option "sample" s "sample name" values="load-model hitbox cqp-cast" required
 
