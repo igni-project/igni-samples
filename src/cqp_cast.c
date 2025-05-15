@@ -11,6 +11,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+/* 'Cast Point' Request 
+ *
+ * The ‘cast point’ request consists of 3 floating-point integers: the X, Y
+ * and Z location of the point to be cast, in that order. */
 struct point_cast_req
 {
 	float x;
@@ -18,6 +22,10 @@ struct point_cast_req
 	float z;
 }; 
 
+/* 'Cast Ray' Request
+ *
+ * The ‘cast ray’ request consists of 2 sets of floating-point X-Y-Z
+ * coordinates: the origin of the ray, followed by its vector. */
 struct ray_cast_req
 {
 	float x_loc;
@@ -28,6 +36,8 @@ struct ray_cast_req
 	float z_dir;
 };
 
+/* This example only needs to store one request of uncertain type. To save
+ * unused space, the structs of both requests are unified. */
 union cast_data
 {
 	struct point_cast_req point;
@@ -49,7 +59,10 @@ int cqp_cast()
 
 	/* ------------------- */
 
+	/* CQP request code */
 	int cast_mode;
+
+	/* CQP request data */
 	union cast_data cast;
 
 	printf("Running sample: CQP Cast\n");
@@ -83,6 +96,7 @@ int cqp_cast()
 		return -1;
 	}
 
+	/* User is to specify the type of hitbox trigger to cast. */
 	printf("Select cast mode:\n");
 	printf("0: Cast Point\n");
 	printf("1: Cast Ray\n");
@@ -92,6 +106,7 @@ int cqp_cast()
 	switch (cast_mode)
 	{
 	case 0:
+		/* Prompt user for further trigger details */
 		printf("Enter point X.\n");
 		scanf("%f", &cast.point.x);
 		printf("Enter point Y.\n");
@@ -101,6 +116,7 @@ int cqp_cast()
 
 		printf("Casting point.");
 
+		/* Send a request to cast a point. */
 		cqp_cast_point(
 			fd,
 			cast.point.x,
@@ -112,6 +128,7 @@ int cqp_cast()
 		break;
 
 	case 1:
+		/* Prompt user for further trigger details */
 		printf("Enter ray X location.\n");
 		scanf("%f", &cast.ray.x_loc);
 		printf("Enter ray Y location.\n");
@@ -128,6 +145,7 @@ int cqp_cast()
 
 		printf("Casting ray.");
 
+		/* Send a request to cast a ray. */
 		cqp_cast_ray(
 			fd,
 			cast.ray.x_loc,

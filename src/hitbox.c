@@ -9,14 +9,26 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+/* Sample: Hitbox
+ * Difficulty: Easy to Medium, depending on complexity of collisions */
 int hitbox()
 {
 	char box_hit;
 	uint8_t cqp_cast;
 	float cqp_float_param;
+
+	/* Igni trigger socket */
+
+	/* Socket descriptor */
 	int fd;
-	struct sockaddr_un sv_addr;
+
+	/* Address */
+	struct sockaddr_un svAddr;
+
+	/* Path to socket */
 	const char* domain;
+
+	/* ------------------- */
 
 	printf("Running sample: Hitbox\n");
 
@@ -27,7 +39,7 @@ int hitbox()
 		return -1;
 	}
 
-	/* Create a socket for ourselves, the client. */
+	/* Create a socket for the client. */
 	fd = socket(AF_UNIX, SOCK_STREAM, 0);
 	if (fd == -1)
 	{
@@ -46,8 +58,11 @@ int hitbox()
 
 	while (1)
 	{
+		/* Wait until client recieves a CQP request */
 		recv(fd, &cqp_cast, sizeof(cqp_cast), 0);
 
+		/* As of right now, this sample only includes point collision
+		 * detection. */
 		if (cqp_cast != CQP_REQ_CODE_CAST_POINT)
 		{
 			printf("Unsupported cast type: %i\n", cqp_cast);
