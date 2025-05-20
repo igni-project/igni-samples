@@ -23,7 +23,7 @@ int hitbox()
 	int fd;
 
 	/* Address */
-	struct sockaddr_un svAddr;
+	struct sockaddr_un sv_addr;
 
 	/* Path to socket */
 	const char* domain;
