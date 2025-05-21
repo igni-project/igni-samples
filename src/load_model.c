@@ -3,13 +3,13 @@
 /* Sample: Load Model
  * Difficulty: Easy */
 
-#include <libsup/sup.h>
-#include <stdio.h>
-#include <string.h>
-#include <sys/socket.h>
-#include <sys/un.h>
-#include <unistd.h>
-#include <stdlib.h>
+#include <libsup/sup.h> /* sup_asset_load and sup_asset_show */
+#include <stdio.h> /* printf and perror */
+#include <string.h> /* strncpy */
+#include <sys/socket.h> /* socket and connect*/
+#include <sys/un.h> /* sockaddr_un */
+#include <unistd.h> /* sleep */
+#include <stdlib.h> /* getenv */
 
 /* SUP requires all meshes have a unique identification code. */
 #define MESH_ID 3
@@ -22,7 +22,7 @@ int load_model()
 	int fd;
 
 	/* Address */
-	struct sockaddr_un svAddr;
+	struct sockaddr_un sv_addr;
 
 	/* Path to socket */
 	const char* domain;
@@ -50,11 +50,11 @@ int load_model()
 
 	/* A sockaddr_un struct points to the socket to connect to. In this case,
 	 * the socket of path IGNI_DISPLAY. */
-	svAddr.sun_family = AF_UNIX;
-	strncpy(svAddr.sun_path, domain, sizeof(svAddr.sun_path));
+	sv_addr.sun_family = AF_UNIX;
+	strncpy(sv_addr.sun_path, domain, sizeof(sv_addr.sun_path));
 
 	/* The client may now connect to the server. */
-	if (connect(fd, (struct sockaddr*)&svAddr, sizeof(svAddr)) == -1)
+	if (connect(fd, (struct sockaddr*)&sv_addr, sizeof(sv_addr)) == -1)
 	{
 		perror("Failed to connect to server");
 		return -1;

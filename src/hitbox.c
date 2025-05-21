@@ -1,16 +1,17 @@
 #include "hitbox.h"
 
-#include <libcqp/cqp.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <string.h>
-#include <sys/socket.h>
-#include <sys/un.h>
-#include <unistd.h>
-#include <stdlib.h>
-
 /* Sample: Hitbox
- * Difficulty: Easy to Medium, depending on complexity of collisions */
+ * Difficulty: Easy to Medium, depending on collision complexity */
+
+#include <libcqp/cqp.h> /* CQP_REQ_CODE_CAST_POINT */
+#include <stdint.h> /* uint8_t */
+#include <stdio.h> /* printf and perror */
+#include <string.h> /* strncpy */
+#include <sys/socket.h> /* socket, recv and connect*/
+#include <sys/un.h> /* sockaddr_un */
+#include <unistd.h> /* sleep */
+#include <stdlib.h> /* getenv */
+
 int hitbox()
 {
 	char box_hit;
