@@ -3,7 +3,7 @@
 /* Sample: CQP Cast
  * Difficulty: Easy */
 
-#include <libsup/sup.h> /* cqp_cast_point and cqp_cast_ray */
+#include <libcqp/cqp.h> /* cqp_cast_point and cqp_cast_ray */
 #include <stdio.h> /* printf, scanf and perror */
 #include <string.h> /* strncpy */
 #include <sys/socket.h> /* socket and connect*/
