@@ -8,5 +8,5 @@ If a SUP display manager is already installed and active, simply run the built e
 
 1. Clone, build and install [ignition](https://github.com/igni-project/ignition) as instructed in its README file.
 
-2. Run the `testrun` script in the root directory of this repository.
+2. Enter the command `igni-samples -s` into a terminal followed by the sample to run. e.g. `igni-samples -s load-model`.
 
