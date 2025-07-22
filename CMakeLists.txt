@@ -21,6 +21,9 @@ find_library(LIBCQP cqp)
 
 target_link_libraries(igni-samples ${LIBCQP} ${LIBM} ${LIBSUP})
 
+set(ASSETS_DIR_SRC "${PROJECT_SOURCE_DIR}/igni-samples")
+
+install(DIRECTORY ${ASSETS_DIR_SRC} DESTINATION "/usr/share")
 install(TARGETS igni-samples)
 include(CPack)
 
